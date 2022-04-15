@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>the right price</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <div id="div_image">
+            <img src="./assets/image/1.jpeg" alt="image" id="image">
+        </div>
+    </header>
+
+    <p id="description"></p>
+
+    <div id="div_boutons_choix">
+        <div class="box_bouton">
+            <button onclick="choiceButton1()" id="bouton1" ></button>
+        </div>
+        <div class="box_bouton">
+            <button onclick="choiceButton2()" id="bouton2" ></button>
+        </div>
+        <div class="box_bouton">
+            <button onclick="choiceButton3()" id="bouton3" ></button>
+        </div>
+        <div class="box_bouton">
+            <button onclick="choiceButton4()" id="bouton4" ></button>
+        </div>
+    </div>
+
+    <div id="chargement">
+        <div class="ch1" id="ch1_game">1</div>
+        <div class="ch2" id="ch2_game">2</div>
+        <div class="ch3" id="ch3_game">3</div>
+        <div class="ch4" id="ch4_game">4</div>
+        <div class="ch5" id="ch5_game">5</div>
+        <div class="ch6" id="ch6_game">6</div>
+        <div class="ch7" id="ch7_game">7</div>
+        <div class="ch8" id="ch8_game">8</div>
+        <div class="ch9" id="ch9_game">9</div>
+        <div class="ch10" id="ch10_game">10</div>
+    </div>
+
+    <div id="box_bouton_restart">
+        <button onclick="restart()" id="bouton_restart" class="game">
+            <img src="./assets/content/fleche.png" alt="image" id="fleche" class="fleche_game">
+        </button>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>

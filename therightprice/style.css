@@ -1,0 +1,434 @@
+/*** font import ***/
+@font-face {
+    font-family: "font-bold";
+    src: url(./assets/font/Rowdies/Rowdies-Bold.ttf);
+}
+@font-face {
+    font-family: "font-light";
+    src: url(./assets/font/Rowdies/Rowdies-Light.ttf);
+}
+@font-face {
+    font-family: "font-regular";
+    src: url(./assets/font/Rowdies/Rowdies-Regular.ttf);
+}
+
+
+
+/*** commun class creation ***/
+.centrer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*** classic settings ***/
+.header_index {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+body {
+    background: url(./assets/content/bg.jpg) no-repeat fixed center/cover;
+    color: #ffffff;
+    font-family: font-light;
+    cursor: default;
+}
+
+h2 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+
+
+/*************** index.html ***************/
+#title {
+    width: 600px;
+}
+
+#div_rules {
+    background: url(./assets/content/img_rules.jpeg) no-repeat;
+    background-size: 100% 306px;
+    width: 70%;
+    height: 225px;
+    margin: 10px auto;  /*outer margin*/
+    padding: 40px 70px/*inner margin*/;
+    border-radius: 15px;
+    box-shadow: 0px 2px 12px 5px rgba(0, 0, 0, 0.250);
+    margin-bottom: 50px;
+}
+
+#div_rules_text {
+    margin: 5px 0px 0px 0px
+}
+
+#div_playButton{
+    text-align: center;
+}
+#playButton {
+    background: rgb(32 32 32 / 1);
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    height: 100px;
+    width: 300px;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 2.7rem;
+    font-family: "font-regular";
+    grid-area: bt;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+#playButton:hover {
+    font-size: 3rem;
+}
+
+
+
+/*************** game.html ***************/
+#div_image {
+    background: url(./assets/content/img_rules.jpeg) no-repeat;
+    background-size: 100% 260px;
+    width: 50%;
+    height: 180px;
+    margin: 10px auto;  /*outer margin*/
+    padding: 40px 70px/*inner margin*/;
+    border-radius: 15px;
+    box-shadow: 0px 2px 12px 5px rgba(0, 0, 0, 0.250);
+    margin-bottom: 0px;
+}
+
+#image {
+    height: 195px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    border-radius: 15px;
+    margin-top: -6px;
+}
+
+
+#description {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+#div_help {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+#div_boutons_choix {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 70%;
+    height: 200px;
+}
+
+.box_bouton {
+    width: 50%; 
+    height: 50%; 
+    float: left;
+    text-align:center;
+}
+
+#bouton1, #bouton2, #bouton3, #bouton4 {
+    background: rgb(32 32 32 / 1);
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    height: 75px;
+    width: 200px;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: "font-regular";
+    grid-area: bt;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+
+}
+
+#bouton1:hover, #bouton2:hover, #bouton3:hover, #bouton4:hover {
+    font-size: 1.1rem;
+}
+
+#chargement {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    padding-left: 10%;
+    margin-top: 50px;
+}
+
+.ch1, .ch2, .ch3, .ch4, .ch5, .ch6, .ch7, .ch8, .ch9, .ch10 {
+    width: 7%; 
+    height: 25px; 
+    float: left;
+    text-align: center;
+    background: rgb(32 32 32 / 1);
+    margin: 5px;
+    padding: 3px 0px 0px 0px;
+    border-radius: 90px;
+    border: 1px solid white;
+    cursor:default;
+}
+
+
+#box_bouton_restart {
+    text-align: center;
+}
+
+
+#bouton_restart {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    transition: 0.2s;
+    background: rgb(32 32 32 / 1);
+}
+
+.end {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-left: -20px;
+    border-radius: 90px;
+    cursor: pointer;
+    margin-top: -120px;
+    margin-left: -25px;
+}
+
+
+.game {
+    height: 0px;
+    width: 0px;
+}
+
+
+
+.fleche_game {
+    width: 0px;
+    height: 0px;
+}
+
+.fleche_end {
+    width: 40px;
+    height: 40px;
+    margin-top: -4.5px;
+    margin-left: -5.5px;
+    transition: 0.5s;
+}
+
+.fleche_end:hover {
+    transform: rotate(180deg);
+    margin-top: -7px;
+
+}
+
+
+
+
+/********* Responive **********/
+@media screen and (min-width: 650px) {
+    #div_rules {
+        width: 450px;
+    }
+    #div_image {
+        width: 300px;
+    }
+    #div_boutons_choix {
+        width: 500px;
+    }
+    .ch1, .ch2, .ch3, .ch4, .ch5, .ch6, .ch7, .ch8, .ch9, .ch10 {
+        width: 40px; 
+    }
+    #chargement {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    chargement {
+        margin-left: none;
+        margin-right: none;
+        width: 600px;
+        height: 60px;
+        text-align: none;
+        padding-left: none;
+        margin-top: none;
+    }
+    .ch1, .ch2, .ch3, .ch4, .ch5, .ch6, .ch7, .ch8, .ch9, .ch10 {
+        width: 37px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .ch1, .ch2, .ch3, .ch4, .ch5, .ch6, .ch7, .ch8, .ch9, .ch10 {
+        width: 36px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .ch1, .ch2, .ch3, .ch4, .ch5, .ch6, .ch7, .ch8, .ch9, .ch10 {
+        width: 34px;
+    }
+}
+
+
+@media screen and (max-width: 687px) {
+    #image {
+        height: 195px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        border-radius: 15px;
+        margin-top: -6px;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    #title {
+        width: 370px;
+    }
+
+    #div_rules {
+        background: url(./assets/content/img_rules.jpeg) no-repeat;
+        background-size: 100% 230px;
+        width: 60%;
+        height: 180px;
+        margin: 10px auto;  /*outer margin*/
+        padding: 25px 40px/*inner margin*/;
+        border-radius: 15px;
+        box-shadow: 0px 2px 12px 5px rgba(0, 0, 0, 0.250);
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 619px) {
+    #div_boutons_choix {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 80%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 547px) {
+    #div_boutons_choix {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 90%;
+        height: 200px;
+    }
+
+    #chargement {
+    margin-left: -16px;
+    }
+}
+
+
+
+@media screen and (max-width: 463px) {
+
+    #title {
+        width: 370px;
+    }
+
+    #div_rules {
+        background: url(./assets/content/img_rules.jpeg) no-repeat;
+        background-size: 100% 230px;
+        width: 60%;
+        height: 180px;
+        margin: 10px auto;  /*outer margin*/
+        padding: 25px 40px/*inner margin*/;
+        border-radius: 15px;
+        box-shadow: 0px 2px 12px 5px rgba(0, 0, 0, 0.250);
+        margin-bottom: 50px;
+    }
+
+    .box_bouton {
+        width: 50%; 
+        height: 50%; 
+        float: none;
+        text-align:center;
+    }
+
+    #chargement {
+        float:right;
+        width: 15%;
+        height: 300px;
+        text-align: right;
+        padding-left: 10%;
+        margin-top: 50px;
+        position: absolute;
+        margin-top: -190px;
+        margin-left: 280px;
+    }
+    .ch1, .ch2, .ch3, .ch4, .ch5, .ch6, .ch7, .ch8, .ch9, .ch10 {
+        width: 40px; 
+        height: 25px; 
+        float: left;
+        text-align: center;
+        background: rgb(32 32 32 / 1);
+        margin: 5px;
+        padding: 3px 0px 0px 0px;
+        border-radius: 90px;
+        border: 1px solid white;
+        cursor:default;
+    }
+
+    .end {
+        height: 50px;
+        width: 50px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 90px;
+        cursor: pointer;
+        margin-top: -30px;
+        margin-left: 40px;
+    }
+    
+    .game {
+        height: 0px;
+        width: 0px;
+        margin-top: 210px;
+        margin-left: -110px;
+
+    }
+
+    #image {
+        height: 195px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        border-radius: 15px;
+        margin-top: -6px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #image {
+        max-width: 190px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #image {
+        max-width: 185px;
+    }
+}
