@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "font-game";
+    src: url(./assets/Font/basic.ttf);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(./assets/bg.png) no-repeat fixed center/cover;
+}
+
+#title{
+    background: url(./assets/title.png) no-repeat;
+    background-size: 450px;
+    z-index: 3;
+    position : absolute;
+    top: 100px;
+    left: 0px;
+    width: 450px;
+    height: 120px;
+
+}
+
+#best_score_1 {
+    position : absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 2;
+    font-size: 0.6rem;
+    width: 150px;
+    font-family: font-game;
+    z-index: 3;
+
+}
+
+#text_score {
+    position : absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 2;
+    font-size: 2.5rem;
+    width: 300px;
+    text-align: center;
+    font-family: font-game;
+    transition: 0s;
+}
+
+#game_over {
+    position : absolute;
+    top: 130px;
+    left: 0px;
+    z-index: 2;
+    font-size: 3rem;
+    width: 500px;
+    text-align: center;
+    font-family: font-game;
+    z-index: -1;
+}
+
+#restart {
+    position : absolute;
+    top: 570px;
+    left: 0px;
+    z-index: 2;
+    font-size: 1rem;
+    width: 500px;
+    text-align: center;
+    font-family: font-game;
+    color: rgba(0,0, 0, 0);
+    z-index: -1;
+}
+
+#game {
+    width: 500px;
+    height: 600px;
+    border: 4px solid black;
+    margin: auto;
+    margin-top: 35px;
+    overflow: hidden;
+    background-color: #bcfffd;
+}
+
+#player {
+    background: url(./assets/bird.png) no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+    transform: rotate(0deg);
+}
+
+
+
+
+
+#b1 {
+    top: -5px;
+    left: 520px;
+    width: 110px;
+    height: 600px;
+    background-color: rgb(87, 175, 67);
+    position: relative;
+    animation: b1_animation 10s infinite linear;
+    border: black 5px solid
+}
+
+#b2 {
+    top: -615px;
+    left: 920px;
+    width: 110px;
+    height: 600px;
+    background-color: rgb(87, 175, 67);
+    position: relative;
+    animation: b2_animation 10s infinite linear;
+    border: black 5px solid
+}
+
+#b3 {
+    top: -1225px;
+    left: 1320px;
+    width: 110px;
+    height: 600px;
+    background-color: rgb(87, 175, 67);
+    position: relative;
+    animation: b3_animation 10s infinite linear;
+    border: black 5px solid
+}
+
+#b4 {
+    top: -1835px;
+    width: 110px;
+    left: 1720px;
+    height: 600px;
+    background-color: rgb(87, 175, 67);
+    position: relative;
+    animation: b4_animation 10s infinite linear;
+    border: black 5px solid
+}
+
+
+@keyframes b1_animation {
+    0%{left: 520px}
+    100%{left: -1340px}
+}
+
+@keyframes b2_animation {
+    0%{left: 920px}
+    100%{left: -940px}
+}
+
+@keyframes b3_animation {
+    0%{left: 1320px}
+    100%{left: -540px}
+}
+
+@keyframes b4_animation {
+    0%{left: 1720px}
+    100%{left: -140px}
+}
+
+
+
+
+#h1 {
+    width: 130px;
+    height: 230px;
+    background: url(./assets/hole.png) no-repeat;
+    position: relative;
+    left: 200px;
+    top: -2442px;
+    animation: b1_animation 10s infinite linear;
+    margin-left: -5px;
+}
+
+#h2 {
+    width: 130px;
+    height: 230px;
+    background: url(./assets/hole.png) no-repeat;
+    position: relative;
+    left: 200px;
+    top: -2672px;
+    animation: b2_animation 10s infinite linear;
+    margin-left: -5px;
+}
+
+#h3 {
+    width: 130px;
+    height: 230px;
+    background: url(./assets/hole.png) no-repeat;
+    position: relative;
+    left: 200px;
+    top: -2902px;
+    animation: b3_animation 10s infinite linear;
+    margin-left: -5px;
+}
+
+#h4 {
+    width: 130px;
+    height: 230px;
+    background: url(./assets/hole.png) no-repeat;
+    position: relative;
+    left: 200px;
+    top: -3132px;
+    animation: b4_animation 10s infinite linear;
+    margin-left: -5px;
+}
