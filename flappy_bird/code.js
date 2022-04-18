@@ -44,6 +44,8 @@ var score = 0;
 var best_score_1_value = localStorage.getItem('best_score');
 
 var transition_faite = false
+var move_bg_bool = true
+var first_game = true
 
 /*
 localStorage.removeItem('best_score')
@@ -94,10 +96,14 @@ player.style.top = 360 + "px"
 
 
 
+/*************** Other ***************/
+
+
+    
 
 
 
-/*************** random pose start hole ***************/
+/*************** position random trou debut ***************/
 
 var random1 = random_pos(2442)
 h1.style.top = random1 + "px";
@@ -305,6 +311,7 @@ setInterval(function(){
         h4.style.animationPlayState = 'paused';
         jump = false
         rotate = false
+
     }
 
     /*************** Game Over ***************/
@@ -342,6 +349,8 @@ setInterval(function(){
 
         jump = false
         rotate = true
+        move_bg_bool = false
+        first_game = false
 
         if(score > best_score_1_value){
             best_score_1_value = score
@@ -514,7 +523,11 @@ function restart_game(){
     player.style.zIndex = 2
     rotate = false
     jump = true
+    move_bg_bool = true
     activate_gravity = true
+    if(first_game == false){
+        document.getElementById('game').style.backgroundPosition = '0px'
+    }
     game_over.style.zIndex = -1;
     restart.style.zIndex = -1;
     velocity_y = 0
@@ -561,9 +574,14 @@ setInterval(function(){
 
 
 
-setInterval(function(){
-    /*************** move bg ***************/
-    old_placement = get_info('game', 'background-position')
 
-    document.getElementById("game").style.backgroundPosition = (old_placement - 1) + "px"
+/*************** move bg ***************/
+
+setInterval(function(){
+    if(move_bg_bool){
+        old_placement = get_info('game', 'background-position')
+
+        document.getElementById("game").style.backgroundPosition = (old_placement - 1) + "px"
+    }
+
 },40);
