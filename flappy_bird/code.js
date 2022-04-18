@@ -94,14 +94,10 @@ player.style.top = 360 + "px"
 
 
 
-/*************** Other ***************/
-
-
-    
 
 
 
-/*************** position random trou debut ***************/
+/*************** random pose start hole ***************/
 
 var random1 = random_pos(2442)
 h1.style.top = random1 + "px";
