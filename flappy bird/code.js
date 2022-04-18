@@ -72,7 +72,7 @@ function sin(x){
 };
 
 function random_pos(start) {
-    return -((start - Math.random()*300)-50)
+    return ((-start + (Math.random()*260)+32))
 };
 
 function get_info(who, what) {
@@ -102,6 +102,7 @@ player.style.top = 360 + "px"
 
 
 /*************** position random trou debut ***************/
+
 var random1 = random_pos(2442)
 h1.style.top = random1 + "px";
 waiting1 = false
@@ -117,7 +118,6 @@ waiting3 = false
 var random4 = random_pos(3132)
 h4.style.top = random4 + "px";
 waiting4 = false
-
 
 
 
@@ -191,7 +191,7 @@ setInterval(function(){
 
     var distance_web_game = (document.documentElement.scrollWidth - 500)/2
 
-    /*************** placement joueur ***************/
+    /*************** placement player ***************/
     if(gameOver == false){
         player.style.left = distance_web_game + 50 + "px"
     }
@@ -234,7 +234,7 @@ setInterval(function(){
             gameOver = true
     }
 
-    if((player_top - 35 + player_height + 20 > 635) || (player_left < distance_web_game)){
+    if((player_top - 35 + player_height + 20 > 625) || (player_left < distance_web_game)){
         player.style.zIndex = -1
         player.style.top = 200 + "px"
         player.style.left = -1000 + "px"
@@ -462,6 +462,8 @@ setInterval(function(){
         velocity_y = -4
     }
 
+
+
     /*************** text ***************/
     text_score.innerHTML = score
     console.log()
@@ -562,3 +564,10 @@ setInterval(function(){
 
 
 
+
+setInterval(function(){
+    /*************** move bg ***************/
+    old_placement = get_info('game', 'background-position')
+
+    document.getElementById("game").style.backgroundPosition = (old_placement - 1) + "px"
+},40);

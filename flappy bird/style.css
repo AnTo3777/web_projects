@@ -10,7 +10,8 @@
 }
 
 body{
-    background: url(./assets/bg.png) no-repeat fixed center/cover;
+    background-color: rgb(40, 43, 48);
+    z-index: -1;
 }
 
 #title{
@@ -81,7 +82,9 @@ body{
     margin: auto;
     margin-top: 35px;
     overflow: hidden;
-    background-color: #bcfffd;
+    background: url(./assets/bg.png);
+    background-size: auto 600px;
+    background-position: 0px;
 }
 
 #player {
@@ -105,10 +108,11 @@ body{
     left: 520px;
     width: 110px;
     height: 600px;
-    background-color: rgb(87, 175, 67);
+    background: url(./assets/tube.png);
+    background-size: 110px auto;
     position: relative;
     animation: b1_animation 10s infinite linear;
-    border: black 5px solid
+    border: rgb(84, 56, 71) 5px solid
 }
 
 #b2 {
@@ -116,10 +120,11 @@ body{
     left: 920px;
     width: 110px;
     height: 600px;
-    background-color: rgb(87, 175, 67);
+    background: url(./assets/tube.png);
+    background-size: 110px auto;
     position: relative;
     animation: b2_animation 10s infinite linear;
-    border: black 5px solid
+    border: rgb(84, 56, 71) 5px solid
 }
 
 #b3 {
@@ -127,10 +132,11 @@ body{
     left: 1320px;
     width: 110px;
     height: 600px;
-    background-color: rgb(87, 175, 67);
+    background: url(./assets/tube.png);
+    background-size: 110px auto;
     position: relative;
     animation: b3_animation 10s infinite linear;
-    border: black 5px solid
+    border: rgb(84, 56, 71) 5px solid
 }
 
 #b4 {
@@ -138,10 +144,11 @@ body{
     width: 110px;
     left: 1720px;
     height: 600px;
-    background-color: rgb(87, 175, 67);
+    background: url(./assets/tube.png);
+    background-size: 110px auto;
     position: relative;
     animation: b4_animation 10s infinite linear;
-    border: black 5px solid
+    border: rgb(84, 56, 71) 5px solid
 }
 
 
