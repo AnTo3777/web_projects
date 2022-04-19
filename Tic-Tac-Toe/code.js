@@ -290,26 +290,34 @@ function ia_turn(){
 
         /*************** Random position ***************/
         if(end_turn_ia == false){
-            var list_pos_random = []
+            var list_pos_dispo = []
             for(var i = 0; i < 9; i++){
                 if((grid[i] != 'x') && (grid[i] != 'o')){
-                list_pos_random.push(i)
+                list_pos_dispo.push(i)
                 }
-                index_random = Math.round(Math.random()*(list_pos_random.length-1))
-                pos_random = list_pos_random[index_random]
+                pos_dispo = list_pos_dispo[0]
             }   
-            place_hit('circle', pos_random)
+            console.log(list_pos_dispo)
+            place_hit('circle', pos_dispo)
             end_turn_ia = true
         }
     }
 }
 
 
+
+
+
 function click_animation(){
-    grid_el.style.transition = '0.05s'
+    grid_el.style.transition = '0.08s'
     grid_el.style.height = '312px'
     grid_el.style.backgroundSize = '312px'
     grid_el.style.width = '306px'
+
+    var distance_web_game_left = (document.documentElement.scrollWidth - 306)/2
+    var distance_web_game_top = (document.documentElement.scrollHeight - 312)/2
+    grid_el.style.top = distance_web_game_top + 'px'
+    grid_el.style.left = distance_web_game_left + 'px'
 
     
     for(var i=0;i<9; i++){
@@ -318,13 +326,15 @@ function click_animation(){
         var old_top = get_info('box' + String(i), "top")
         document.getElementById("box" + String(i)).style.top = old_top + 2 + "px"
 
-
         if(grid[i] == 'o'){
+            document.getElementById("box" + String(i)).style.background = "url(./assets/circle.png) no-repeat center"
             document.getElementById("box" + String(i)).style.backgroundSize = "72px"
         }
-        else{
+        else if(grid[i] == 'x'){
+            document.getElementById("box" + String(i)).style.background = "url(./assets/cross.png) no-repeat center"
             document.getElementById("box" + String(i)).style.backgroundSize = "59px"
         }
+        
 
 
     }
@@ -334,6 +344,11 @@ function click_animation(){
         grid_el.style.backgroundSize = '306px'
         grid_el.style.width = '300px'
 
+        var distance_web_game_left = (document.documentElement.scrollWidth - 300)/2
+        var distance_web_game_top = (document.documentElement.scrollHeight - 300)/2
+        grid_el.style.top = distance_web_game_top + 'px'
+        grid_el.style.left = distance_web_game_left + 'px'
+
         for(var i=0;i<9; i++){
             var old_left = get_info('box' + String(i), "left")
             document.getElementById("box" + String(i)).style.left = old_left - 2 + "px"
@@ -342,9 +357,11 @@ function click_animation(){
     
     
             if(grid[i] == 'o'){
+                document.getElementById("box" + String(i)).style.background = "url(./assets/circle.png) no-repeat center"
                 document.getElementById("box" + String(i)).style.backgroundSize = "70px"
             }
-            else{
+            else if(grid[i] == 'x'){
+                document.getElementById("box" + String(i)).style.background = "url(./assets/cross.png) no-repeat center"
                 document.getElementById("box" + String(i)).style.backgroundSize = "57px"
             }
     
@@ -354,7 +371,7 @@ function click_animation(){
         setTimeout(function(){
             grid_el.style.transition = '0s'
         }, 50)
-    },50);
+    },80);
 
 
     
@@ -438,7 +455,7 @@ function cross_b8(){
 
 /*************** Display ***************/
 setInterval(function(){
-    var distance_web_game_left = (document.documentElement.scrollWidth - 300)/2
+    var distance_web_game_left = (document.documentElement.scrollWidth - 306)/2
     var distance_web_game_top = (document.documentElement.scrollHeight - 300)/2
 
 
