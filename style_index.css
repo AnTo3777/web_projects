@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "font-menu";
+    src: url(./assets/font.ttf);
+}
+
+
+
+* {
+    background-color: rgb(40, 42, 48);
+    font-family: font-menu;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
