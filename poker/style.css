@@ -1,0 +1,242 @@
+* {
+    background-color: rgb(40, 43, 48);
+}
+
+
+#game_box_id {
+    border: 1px red solid;
+    width: 800px;
+    height: 500px;
+    margin: 100px auto;
+    position: relative;
+    background: url(./assets/bg.png) no-repeat;
+    background-size: 800px;
+}
+
+.button {
+    position: relative;
+    background-color: red;
+    color: rgb(40, 43, 48);
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#fold{
+    left: 470px;
+}
+#callcheck{
+    left: 580px;
+    top: -40px
+}
+#raisebet{
+    left: 690px;
+    top: -80px
+}
+
+
+
+
+/*************** Card middle ***************/
+.card{
+    border: 1px black solid;
+    width: 42px;
+    height: 62px;
+    position: relative;
+    border-radius: 2px;
+}
+
+
+#card1_middle {
+    left: 276px;
+    top:180px;
+    background: url(./assets/back_card.png) no-repeat;
+}
+#card2_middle {
+    left: 329px;
+    top:116px;
+    transform: rotate(1deg);
+    background: url(./assets/back_card.png) no-repeat;
+}
+#card3_middle {
+    left: 379px;
+    top:52px;
+    transform: rotate(0deg);
+    background: url(./assets/back_card.png) no-repeat;
+}
+#card4_middle {
+    left: 431px;
+    top:-12px;
+    transform: rotate(-3deg);
+    background: url(./assets/back_card.png) no-repeat;
+}
+#card5_middle {
+    left: 480px;
+    top:-73px;
+    transform: rotate(0deg);
+    background: url(./assets/back_card.png) no-repeat;
+}
+
+
+#card1_player {
+    left: 305px;
+    top: 5px;
+    background: url(./assets/cards.png) no-repeat;
+    background-size: 650px 262px;
+}
+#card2_player {
+    left: 350px;
+    top: -59px;
+    background: url(./assets/cards.png) no-repeat;
+    background-size: 650px 262px;
+}
+
+
+
+
+/******* Pot ******/
+#pot {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px red solid;
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    width: 400px;
+    height: 40px;
+    left: 197px;
+    top: -435px;
+}
+
+
+/******* Stock ******/
+
+.inventory {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px rgba(0, 0, 0, 0) solid;
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    width: 57px;
+    height: 20px;
+}
+
+#inventory_player {
+    left: 240px;
+    top: -202px;
+}
+#inventory_bot1 {
+    left: 7px;
+    top: -413px;
+}
+#inventory_bot2 {
+    left: 232px;
+    top: -602px;
+}
+#inventory_bot3 {
+    left: 524px;
+    top: -624px;
+}
+#inventory_bot4 {
+    left: 736px;
+    top: -479px;
+}
+#inventory_bot5 {
+    left: 526px;
+    top: -316px;
+}
+
+
+
+/******* display ******/
+
+.display_name {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px rgba(0, 0, 0, 0) solid;
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    width: 57px;
+    height: 20px;
+}
+
+#display_player {
+    left: 240px;
+    top: -369px;
+}
+#display_bot1 {
+    left: 7px;
+    top: -580px;
+}
+#display_bot2 {
+    left: 232px;
+    top: -769px;
+}
+#display_bot3 {
+    left: 524px;
+    top: -791px;
+}
+#display_bot4 {
+    left: 736px;
+    top: -646px;
+}
+#display_bot5 {
+    left: 526px;
+    top: -483px;
+}
+
+
+
+
+
+
+/******* bet ******/
+
+.bet {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px rgba(0, 0, 0, 0) solid;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    width: 57px;
+    height: 20px;
+}
+
+#bet_player {
+    left: 230px;
+    top: -560px;
+}
+
+
+#bet_bot1 {
+    left: 80px;
+    top: -700px;
+}
+
+#bet_bot2 {
+    left: 232px;
+    top: -832px;
+}
+
+
+#bet_bot3 {
+    left: 524px;
+    top: -852px;
+}
+
+
+#bet_bot4 {
+    left: 660px;
+    top: -779px;
+}
+
+#bet_bot5 {
+    left: 526px;
+    top: -666px;
+}

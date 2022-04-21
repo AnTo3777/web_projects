@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Poker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div id="game_box_id">
+        <div class ="card" id="card1_middle"></div>
+        <div class ="card" id="card2_middle"></div>
+        <div class ="card" id="card3_middle"></div>
+        <div class ="card" id="card4_middle"></div>
+        <div class ="card" id="card5_middle"></div>
+
+        <div class ="card" id="card1_player"></div>
+        <div class ="card" id="card2_player"></div>
+
+        <div class ="button" id="fold" onclick="fold()">Fold</div>
+        <div class ="button" id="callcheck" onclick="callcheck()">Call</div>
+        <div class ="button" id="raisebet" onclick="raisebet()">Raise</div>
+
+        <div id="pot">0</div>
+
+        <div class='inventory' id="inventory_player"> 10 000</div>
+        <div class='inventory' id="inventory_bot1">10 000</div>
+        <div class='inventory' id="inventory_bot2">10 000</div>
+        <div class='inventory' id="inventory_bot3"> 10 000</div>
+        <div class='inventory' id="inventory_bot4"> 10 000</div>
+        <div class='inventory' id="inventory_bot5">10 000</div>
+
+        <div class="display_name" id="display_player">player</div>
+        <div class="display_name" id="display_bot1">bot1</div>
+        <div class="display_name" id="display_bot2">bot2</div>
+        <div class="display_name" id="display_bot3">bot3</div>
+        <div class="display_name" id="display_bot4">bot4</div>
+        <div class="display_name" id="display_bot5">bot5</div>
+
+        <div class='bet' id="bet_player"></div>
+        <div class='bet' id="bet_bot1"></div>
+        <div class='bet' id="bet_bot2"></div>
+        <div class='bet' id="bet_bot3"></div>
+        <div class='bet' id="bet_bot4"></div>
+        <div class='bet' id="bet_bot5"></div>
+
+    </div>
+</body>
+
+</body>
+<script src="code.js"></script>
+</html>
